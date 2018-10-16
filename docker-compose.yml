@@ -7,6 +7,8 @@ services:
     networks:
       - ros
     restart: always
+    volumes:
+      - ./:/root/wtgd
 
 networks:
   ros:
