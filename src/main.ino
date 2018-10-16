@@ -17,7 +17,7 @@ void messageCb( const geometry_msgs::Twist& twistMsg)                 // subscri
                                                                       //
 ros::Subscriber<geometry_msgs::Twist> sub("/cmd_vel", &messageCb);    // subscriber setup
 
-void setup(
+void setup()
 {
   nh.initNode();
   nh.subscribe(sub);
@@ -60,5 +60,4 @@ void loop()
     nh.spinOnce();
 
     delay(20);
-
 }
