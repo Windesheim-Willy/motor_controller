@@ -28,10 +28,12 @@
 -I/Users/johnny/.platformio/packages/framework-arduinoavr/libraries/Temboo/src
 -I/Users/johnny/.platformio/packages/framework-arduinoavr/libraries/WiFi/src
 -I/Users/johnny/.platformio/packages/toolchain-atmelavr/avr/include
--I/Users/johnny/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/4.9.2/include
--I/Users/johnny/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/4.9.2/include-fixed
+-I/Users/johnny/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/5.4.0/include
+-I/Users/johnny/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/5.4.0/include-fixed
 -I/Users/johnny/.platformio/packages/tool-unity
--DPLATFORMIO=30601
+-I/Users/johnny/Code/arduino/motor_controller/include
+-I/Users/johnny/Code/arduino/motor_controller/src
+-DPLATFORMIO=30602
 -DARDUINO_AVR_MEGA2560
 -DF_CPU=16000000L
 -DARDUINO_ARCH_AVR
