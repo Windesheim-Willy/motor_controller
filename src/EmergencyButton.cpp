@@ -1,7 +1,7 @@
 #include "EmergencyButton.hpp"
 
 EmergencyButton::EmergencyButton(ros::NodeHandle nodehandle, int pin) :
-  handle(handle),
+  handle(nodehandle),
   publisher("/emergency", &buttonState)
 {
   this->emergencyPin = emergencyPin;

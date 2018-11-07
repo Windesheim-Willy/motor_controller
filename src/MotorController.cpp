@@ -28,10 +28,10 @@ void MotorController::loop()
   // Checksum
   data[5]=0xff-(data[0]+data[1]+data[2]+data[3]+data[4]);
 
-
   for(unsigned char i=0;i<6;i++)
   {
-    Serial1.write(data[i]);                                  // Writing the data to the motorcontroller
+     // Writing the data to the motorcontroller
+    Serial1.write(data[i]);
   }
 }
 
