@@ -7,16 +7,17 @@
 class MotorController {
 
 public:
-  MotorController();
-  MotorController(ros::NodeHandle *nodehandle);
+  MotorController(ros::NodeHandle nodehandle);
 
   void callback(const geometry_msgs::Twist& twistMsg);
   void loop();
 
+  void limit(int &variable);
 private:
-  ros::NodeHandle* handle;
+  ros::NodeHandle handle;
   ros::Subscriber<geometry_msgs::Twist> subscriber;
 
+  char data[5];
   int throttle, direction;
 };
 

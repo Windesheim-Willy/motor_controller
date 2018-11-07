@@ -6,24 +6,26 @@
 // The led plus is connected with the A8 port
 #define EMERGENCY_BUTTON_PIN 8
 
+ros::NodeHandle handle;
+
 MotorController *motorController;
 EmergencyButton *emergencyButton;
 
 int main(void)
 {
-  // ros::init();
-  ros::NodeHandle n;
+  handle.initNode();
 
-  motorController = new MotorController(&n);
-  emergencyButton = new EmergencyButton(&n, EMERGENCY_BUTTON_PIN);
+  motorController = new MotorController(handle);
+  emergencyButton = new EmergencyButton(handle, EMERGENCY_BUTTON_PIN);
 
+  // Loop until the end of time
   while (true) {
-
     motorController->loop();
     emergencyButton->loop();
 
+    // Just sleep for a bit
     delay(20);
-    n.spinOnce();
-  }
 
+    handle.spinOnce();
+  }
 }

@@ -7,11 +7,11 @@
 class EmergencyButton {
 
 public:
-  EmergencyButton(ros::NodeHandle* handle, int pin);
+  EmergencyButton(ros::NodeHandle nodehandle, int pin);
 
   void loop();
 private:
-    ros::NodeHandle *handle;
+    ros::NodeHandle handle;
     ros::Publisher publisher;
 
     int emergencyPin;
