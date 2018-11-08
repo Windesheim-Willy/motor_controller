@@ -1,22 +1,20 @@
 #ifndef INC_WILLY_MOTORCONTROL_H
 #define INC_WILLY_MOTORCONTROL_H
 
-#include <ros.h>
 #include <geometry_msgs/Twist.h>
 
 class MotorController {
 
 public:
-  MotorController(ros::NodeHandle nodehandle);
+  MotorController();
 
-  void callback(const geometry_msgs::Twist& twistMsg);
+  void process(const geometry_msgs::Twist *twistMsg);
   void loop();
 
+protected:
   void limit(int &variable);
-private:
-  ros::NodeHandle handle;
-  ros::Subscriber<geometry_msgs::Twist> subscriber;
 
+private:
   char data[5];
   int throttle, direction;
 };
