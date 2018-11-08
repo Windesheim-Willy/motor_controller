@@ -3,7 +3,9 @@ version: '2.1'
 
 services:
   motor_controller:
-    image: windesheimwinny/motor_controller:latest
+    # image: windesheimwinny/motor_controller:latest
+    build: ./docker
+    command: roslaunch telop_twist_joy telop.launch
     networks:
       - ros
     restart: always
