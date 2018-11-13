@@ -10,7 +10,7 @@ services:
     restart: always
     volumes:
       - ./:/root/wtgd
-    command: rosrun rosserial_python serial_node.py _port:=/dev/tty0
+    command: rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0
     devices:
       - "/dev/ttyACM0:/dev/ttyACM0"
 
