@@ -5,4 +5,6 @@ RUN apt-get update && apt-get install -y ros-kinetic-rosserial \
   arduino \
   arduino-core  \
   gcc-avr \
-  avr-libc
+  avr-libc \
+  ros-kinetic-rosnode \
+  ros-kinetic-teleop-twist-joy

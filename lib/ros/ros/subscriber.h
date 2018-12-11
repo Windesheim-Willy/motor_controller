@@ -1,4 +1,4 @@
-/* 
+/*
  * Software License Agreement (BSD License)
  *
  * Copyright (c) 2011, Willow Garage, Inc.
@@ -46,7 +46,7 @@ namespace ros {
       virtual void callback(unsigned char *data)=0;
       virtual int getEndpointType()=0;
 
-      // id_ is set by NodeHandle when we advertise 
+      // id_ is set by NodeHandle when we advertise
       int id_;
 
       virtual const char * getMsgType()=0;

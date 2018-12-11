@@ -4,11 +4,15 @@ version: '2.1'
 services:
   motor_controller:
     image: windesheimwinny/motor_controller:latest
+    command: roslaunch telop_twist_joy telop.launch
     networks:
       - ros
     restart: always
     volumes:
       - ./:/root/wtgd
+    command: rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0
+    devices:
+      - "/dev/ttyACM0:/dev/ttyACM0"
 
 networks:
   ros:
