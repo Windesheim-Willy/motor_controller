@@ -12,11 +12,11 @@ public:
   void loop();
 
 protected:
-  void limit(int &variable);
+  void limit(int volatile &variable);
 
 private:
   char data[5];
-  int throttle, direction;
+  int volatile throttle, direction;
 };
 
 #endif

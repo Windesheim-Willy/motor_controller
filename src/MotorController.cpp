@@ -42,7 +42,7 @@ void MotorController::loop()
   }
 }
 
-void MotorController::limit(int &variable)
+void MotorController::limit(int volatile &variable)
 {
   if (variable > 100) {
     variable = 100;
