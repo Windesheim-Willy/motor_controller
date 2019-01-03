@@ -62,9 +62,9 @@ void loop()
     analogValue = analogRead(A8);
 
     if (analogValue > 500) {
-      emergency.data = true;
-    } else {
       emergency.data = false;
+    } else {
+      emergency.data = true;
     }
 
     pub.publish(&emergency);
@@ -72,6 +72,6 @@ void loop()
     nh.spinOnce();
 
     delay(20);
-  
+ 
 }
 
